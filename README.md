@@ -1,3 +1,7 @@
+# Sorting Visualizer
+
+This project is a React app which visualizes six different commonly used sorting algorithms. Sorting speed and array size can be adjusted.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
