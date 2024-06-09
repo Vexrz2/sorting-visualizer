@@ -1,0 +1,40 @@
+.array-container {
+    position: relative;
+    top: 50px;
+    height:500px;
+}
+
+.array-bar {
+    background-color: turquoise;
+    display: inline-block;
+    margin: 0 1px;
+    position: relative;
+}
+
+.button-list {
+    position: relative;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.slider-list {
+    position: relative;
+    top: 100px;
+    margin:auto;
+    display:flex;
+    justify-content: center;
+}
+
+.slider {
+    width:300px;
+    margin: 0 20px !important;
+}
+
+Button {
+    margin: 0 10px !important;
+}
+
+body {
+    background-color:beige;
+}
