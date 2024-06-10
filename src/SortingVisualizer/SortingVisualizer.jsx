@@ -164,14 +164,13 @@ export default class SortingVisualizer extends React.Component {
     }
   }
 
-  updateBars(newValue) {
+  updateBars = (event, newValue) => {
     this.setState({bars: newValue});
-    this.resetArray();
-  }
-
-  updateSpeed(newValue) {
+  };
+  
+  updateSpeed = (event, newValue) => {
     this.setState({sortingSpeed: newValue});
-  }
+  };
 
   render() {
     const {array, inSort} = this.state;
@@ -195,8 +194,8 @@ export default class SortingVisualizer extends React.Component {
             
         </div>
         <div className="slider-list">
-          <div className="slider">Number of bars: <Slider defaultValue={100} step={5} min={10} max={200} valueLabelDisplay="auto" onChange={(event, value) => this.updateBars(value)}/></div>
-          <div className="slider">Sorting speed interval (higher is slower): <Slider defaultValue={5} step={1} min={1} max={20} valueLabelDisplay="auto" onChange={(event, value) => this.updateSpeed(value)}/></div>
+          <div className="slider">Number of bars (Reset array for effect):<Slider defaultValue={100} step={5} min={10} max={200} valueLabelDisplay="auto" onChange={this.updateBars} /></div>
+          <div className="slider">Sorting speed interval (higher is slower): <Slider defaultValue={5} step={1} min={1} max={20} valueLabelDisplay="auto" onChange={this.updateSpeed}/></div>
         </div>
         <div className="button-list">
             <Button variant="contained" onClick={() => this.resetArray()}>Generate New Array (Stop sort)</Button>
